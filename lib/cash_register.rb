@@ -4,7 +4,7 @@ attr_accessor :total, :discount
 
 # Makes .new happen / sets total to 0 / optionally sets discount
   def initialize(discount = 0.0)
-    @total = 0
+    @total = 0.0
     @discount = discount
   end
 
@@ -12,12 +12,12 @@ attr_accessor :total, :discount
     self.total += price * quantity
   end
 
-  def self.apply_discount
-    if discount = 0.0
+  def apply_discount
+    if self.discount = 0.0
       puts "There is no discount to apply."
     else
-      total -= discount
-      puts "After the discount, the total comes to #{total}."
+      self.total -= self.discount
+      puts "After the discount, the total comes to #{self.total}."
     end
   end
 
