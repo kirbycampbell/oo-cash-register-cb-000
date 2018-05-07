@@ -3,8 +3,8 @@ class CashRegister
 attr_accessor :total, :discount
 
 # Makes .new happen / sets total to 0 / optionally sets discount
-  def initialize(discount = 0.0)
-    @total = 0.0
+  def initialize(discount = 0)
+    @total = 0
     @discount = discount
   end
 
@@ -13,7 +13,7 @@ attr_accessor :total, :discount
   end
 
   def apply_discount
-    if self.discount = 0.0
+    if self.discount = 0
       puts "There is no discount to apply."
     else
       self.total -= self.discount * self.total
