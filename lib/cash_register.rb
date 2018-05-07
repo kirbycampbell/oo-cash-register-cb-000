@@ -13,8 +13,8 @@ attr_accessor :total, :discount
   end
 
   def apply_discount
-    self.total -= self.discount
-    puts "After the discount, the total comes to #{self.total}"
+    #self.total -= self.discount
+    #puts "After the discount, the total comes to #{self.total}"
   end
 
 end
