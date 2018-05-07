@@ -12,7 +12,7 @@ attr_accessor :total, :discount
     self.total += price * quantity
   end
 
-  def self.apply_discount
+  def apply_discount
     if self.discount != 0.0
       self.total -= self.discount
       puts "After the discount, the total comes to #{self.total}."
