@@ -12,12 +12,12 @@ attr_accessor :total, :discount
     self.total += price * quantity
   end
 
-  def apply_discount
-    if self.discount = 0.0
+  def self.apply_discount
+    if discount = 0.0
       puts "There is no discount to apply."
     else
-      self.total -= self.discount
-      puts "After the discount, the total comes to #{self.total}."
+      total -= discount
+      puts "After the discount, the total comes to #{total}."
     end
   end
 
