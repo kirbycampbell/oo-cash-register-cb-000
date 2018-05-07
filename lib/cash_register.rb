@@ -1,6 +1,6 @@
 
 class CashRegister
-attr_accessor :total, :discount, :items, :last_trans
+attr_accessor :total, :discount, :items, :last_txn
 
 # Makes .new happen / sets total to 0 / optionally sets discount / makes items array
   def initialize(discount = 0)
@@ -14,7 +14,7 @@ attr_accessor :total, :discount, :items, :last_trans
       quantity.times do
         items << item
     end
-    self.last_trans = price * quantity
+    self.last_txn = price * quantity
   end
 
   def apply_discount
@@ -31,7 +31,7 @@ attr_accessor :total, :discount, :items, :last_trans
   end
 
   def void_last_transaction
-    self.total -= self.last_trans
+    self.total -= self.last_txn
   end
 
 end
