@@ -1,6 +1,7 @@
 
 class CashRegister
 attr_accessor :total, :discount
+@@items = []
 
 # Makes .new happen / sets total to 0 / optionally sets discount
   def initialize(discount = 0)
@@ -10,6 +11,7 @@ attr_accessor :total, :discount
 
   def add_item(item, price, quantity = 1)
     self.total += price * quantity
+
   end
 
   def apply_discount
@@ -19,6 +21,10 @@ attr_accessor :total, :discount
       self.total -= self.discount * self.total / 100
       "After the discount, the total comes to $#{self.total}."
     end
+  end
+
+  def items
+    @@all
   end
 
 end
