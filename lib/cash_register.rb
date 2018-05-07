@@ -18,7 +18,7 @@ attr_accessor :total, :discount
     if self.discount == 0
       "There is no discount to apply."
     else
-      self.total -= discount_percentage * self.total
+      self.total -= self.total * discount_percentage
       "After the discount, the total comes to $#{self.total}."
     end
   end
