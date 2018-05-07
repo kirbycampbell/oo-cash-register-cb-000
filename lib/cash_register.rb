@@ -13,7 +13,7 @@ attr_accessor :total, :discount
   end
 
   def apply_discount
-    discount_percentage = self.discount / 100
+    discount_percentage == self.discount / 100
 
     if self.discount == 0
       "There is no discount to apply."
