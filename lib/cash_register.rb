@@ -13,11 +13,11 @@ attr_accessor :total, :discount
   end
 
   def apply_discount
-    if self.discount = 0
-      puts "There is no discount to apply."
+    if self.discount == 0
+      "There is no discount to apply."
     else
       self.total -= self.discount * self.total
-      puts "After the discount, the total comes to $#{self.total}."
+      "After the discount, the total comes to $#{self.total}."
     end
   end
 
